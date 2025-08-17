@@ -1,0 +1,12 @@
+name: Deploy to dev
+on:
+  push:
+    branches: 
+      - "main"
+jobs:
+  redeploy_everything:
+  name: Deploy everything to dev clusters
+  steps:
+    - name: SSH into server
+      run: |
+        echo "hi there"
