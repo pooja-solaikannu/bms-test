@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: SSH into server
         run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" &> ~/ssh_key
+          echo "${{ secrets.SSH_SECRET_KEY }}" &> ~/ssh_key
           mkdir /home/runner/.ssh
           ls /home/runner/.ssh
           touch /home/runner/.ssh/known_hosts
