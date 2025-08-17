@@ -5,8 +5,9 @@ on:
       - "main"
 jobs:
   redeploy_everything:
-  name: Deploy everything to dev clusters
-  steps:
-    - name: SSH into server
-      run: |
-        echo "hi there"
+    runs-on: ubuntu-latest
+    name: Deploy everything to dev clusters
+    steps:
+      - name: SSH into server
+        run: |
+          echo "hi there"
