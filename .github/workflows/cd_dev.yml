@@ -16,4 +16,4 @@ jobs:
           touch /home/runner/.ssh/known_hosts
           echo "${{ secrets.KNOWN_HOSTS }}" &> /home/runner/.ssh/known_hosts
           chmod 700 /home/runner/ssh_key
-          ssh i ~/ssh_key root@54.245.153.71 -t "cd bms-test/ &&  git pull origin main && export PATH=/root/.nvm/versions/node/v22.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin && npm install -g pnpm && pnpm install && pnpm build && pm2 restart --name http server && pm2 restart --name ws server && pm2 restart --name web server"
+          ssh i ~/ssh_key root@157.245.153.71 -t "cd bms-test/ &&  git pull origin main && export PATH=/root/.nvm/versions/node/v22.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin && npm install -g pnpm && pnpm install && pnpm build && pm2 restart --name http server && pm2 restart --name ws server && pm2 restart --name web server"
